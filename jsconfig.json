@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "node_modules/*"
+      ],
+      "@/*": [
+        "app/assets/javascripts/*"
+      ],
+      "~/*": [
+        "app/*"
+      ],
+    }
+  },
+  "include": [
+    "app/assets/javascripts/**/*"
+  ],
+  "exclude": [
+    "**/*.spec.ts",
+    "node_modules",
+    "vendor",
+    "public"
+  ],
+  "compileOnSave": false
+}

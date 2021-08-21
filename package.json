@@ -1,0 +1,20 @@
+{
+  "name": "test_stimulus",
+  "private": true,
+  "scripts": {
+    "rails:dev": "./bin/rails s -p 3000 -b 0.0.0.0",
+    "webpack:dev": "./bin/webpack-dev-server",
+    "dev": "yarn kill && concurrently -k -p \"[{name}]\" -n \"Rails,Webpack\" -c \"red.bold,green.bold\" \"yarn rails:dev\" \"yarn webpack:dev\"",
+    "kill": "kill -9 $(lsof -ti tcp:3000,3035) || true"
+  },
+  "dependencies": {
+    "turbolinks": "^5.2.0"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "@rails/webpacker": "4.3.0",
+    "concurrently": "^6.2.0",
+    "rails-erb-loader": "^5.5.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
